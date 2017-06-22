@@ -31,10 +31,9 @@ app.directive('searchPopover', function ($compile, $templateCache) {
         var link_url = $scope.url;
         var searchBy = $scope.id;
         $scope.$watch('search', function (newValue, oldValue) {
-            if (newValue != oldValue) {
-                console.log(oldValue)
-                if (newValue.length >= 3) {
-                    console.log(newValue);
+           
+                if (newValue !== undefined && newValue.length >= 3) {
+                 
                     var request = $http({
                         method: "post",
                         url: link_url,
@@ -56,7 +55,7 @@ app.directive('searchPopover', function ($compile, $templateCache) {
                 } else {
                     $scope.result = '';
                 }
-            }
+            
         });
     }];
     //function will give template on basis of search by attributes id 

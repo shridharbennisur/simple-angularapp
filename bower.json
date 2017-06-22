@@ -16,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular-strap": "^2.3.12"
+    "angular-strap": "^2.3.12",
+    "angucomplete-alt": "^3.0.0"
   }
 }

@@ -1,4 +1,4 @@
-app.controller('frndCntrl', function ($scope, frndService) {
+app.controller('frndCntrl', function ($scope, frndService, $anchorScroll, $location) {
 
     $scope.contacts = frndService.list();
 
@@ -18,4 +18,14 @@ app.controller('frndCntrl', function ($scope, frndService) {
     $scope.edit = function (id) {
         $scope.newcontact = angular.copy(frndService.get(id));
     }
-})
+
+    $scope.moveDown = function() {
+           $location.hash('downLink'); 
+            $anchorScroll();
+    }; 
+
+    $scope.moveTop = function() {
+          $location.hash('upLink'); 
+          $anchorScroll();
+    };
+});

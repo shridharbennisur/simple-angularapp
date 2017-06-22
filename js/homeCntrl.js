@@ -1,7 +1,8 @@
 app.controller('homeCntrl', function($scope, $http){
     $scope.message = "home ";
     $scope.name = "dssd";
-    
+   
+
     $scope.change = function() {
     
         if ($scope.search != 'undefined' &&  $scope.search.length > 2) { 

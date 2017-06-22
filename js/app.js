@@ -1,7 +1,11 @@
-var app = angular.module('app',['ngRoute', 'angular-advanced-searchbox']);  
+var app = angular.module('app',['ngRoute', 'angular-advanced-searchbox', 'tooltips', 'angucomplete-alt']);  
 
 app.config(function($routeProvider,$locationProvider) { 
-   
+
+
+
+
+
     $routeProvider 
     .when('/', {
         templateUrl : "partials/home.html ",

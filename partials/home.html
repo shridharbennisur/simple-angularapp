@@ -1,21 +1,41 @@
 <h1> {{message}} </h1>
 home
 <script type="text/ng-template" id="templateName.html">
-  <!--<div ng-controller="homeCntrl">-->
-  <input type="text" placeholder="search by name....." ng-model="search"> <br>
+  <!--<div ng-controller="homeCntrl">
+  <input type="text" placeholder="search by name....." ng-model="search" value="search name" onfocus="if(this.value=='search name'){this.value='';}"> <br>
   <!--{{name}} 
         {{url}}
         {{user}} 
-        {{id}} -->
-  {{result}}
+        {{id}} 
+  {{result}}-->
+<div angucomplete-alt
+  id="ex5"
+  placeholder="Search projects"
+  pause="500"
+  selected-object="selectedProject"
+  remote-url="https://api.github.com/search/repositories?q="
+  remote-url-request-formatter="remoteUrlRequestFn"
+  remote-url-data-field="items"
+  title-field="name"
+  description-field="description"
+  minlength="2"
+  input-class="form-control form-control-small"
+  match-class="highlight">
+</div>
+
   <ul>
     <li ng-repeat="results in result">
-      <a ng-show="results" ng-href="#/result/{{results.id}}">{{results.name}}</a>
+      <a ng-show="results" href="">{{results.name}}</a>
     </li>
   </ul>
   <!--</div>-->
 </script>
 <!--<a id = "search_by_name" search-popover url = 'databasefile/getuser.php' data-placement = "right" title = "searching....">Click here</a>-->
-<button search-popover id = "search_by_name"  type="button" class="btn btn-info" url = 'databasefile/getuser.php'  data-placement = "right" title = "searching....">
+<button search-popover id = "search_by_name"  type="button" class="btn btn-info" url = 'databasefile/getuser.php'  data-placement = "right" >
       <span class="glyphicon glyphicon-search"></span> Search
     </button>
+
+
+
+ <i class="" title="This is a star!{{name}}">ddd</i>
+   
