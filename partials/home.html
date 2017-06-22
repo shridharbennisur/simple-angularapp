@@ -1,0 +1,21 @@
+<h1> {{message}} </h1>
+home
+<script type="text/ng-template" id="templateName.html">
+  <!--<div ng-controller="homeCntrl">-->
+  <input type="text" placeholder="search by name....." ng-model="search"> <br>
+  <!--{{name}} 
+        {{url}}
+        {{user}} 
+        {{id}} -->
+  {{result}}
+  <ul>
+    <li ng-repeat="results in result">
+      <a ng-show="results" ng-href="#/result/{{results.id}}">{{results.name}}</a>
+    </li>
+  </ul>
+  <!--</div>-->
+</script>
+<!--<a id = "search_by_name" search-popover url = 'databasefile/getuser.php' data-placement = "right" title = "searching....">Click here</a>-->
+<button search-popover id = "search_by_name"  type="button" class="btn btn-info" url = 'databasefile/getuser.php'  data-placement = "right" title = "searching....">
+      <span class="glyphicon glyphicon-search"></span> Search
+    </button>

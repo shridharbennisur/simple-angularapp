@@ -1,0 +1,18 @@
+<h1>todo list</h1> 
+
+ <script type="text/ng-template" id="templateJobId.html" >
+     <!--<div ng-controller="homeCntrl">-->
+     <input type="text" placeholder="search by job_id....."   ng-model="search" > <br> 
+        <!--{{name}} 
+        {{url}}
+        {{user}}
+		{{id}} -->
+		{{result}}
+      <!--</div>-->
+    </script>
+<!--<a id="search_by_job_id"  search-popover  url='databasefile/getuser.php'  data-placement="right"  title="searching....">Click here</a>-->
+
+
+<button search-popover id = "search_by_job_id"  type="button" class="btn btn-info" url = 'databasefile/getuser.php'  data-placement = "right" title = "searching....">
+      <span class="glyphicon glyphicon-search"></span> Search
+    </button>

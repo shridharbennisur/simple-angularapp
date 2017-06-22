@@ -1,0 +1,21 @@
+{
+  "name": "mailsender",
+  "authors": [
+    "Shridhar Bennisur <shridharmbennisur77@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-strap": "^2.3.12"
+  }
+}
